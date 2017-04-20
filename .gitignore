@@ -1,0 +1,14 @@
+.idea/
+node_modules/
+npm-debug.log
+build/
+dist/
+release/
+
+# Duplicate output from CRT theme /src
+/*.tpl
+/images
+/css
+/js/vendor
+/js/main.js
+/js/plugins.js
