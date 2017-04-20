@@ -5,7 +5,12 @@
 
 Notes for edits:
 
-- to merge from WHMCS, build the template, so our /src/tpl/*.tpl files are in the root, THEN do a git fetch/pull to pull in and auto-merge changes to root files, THEN copy all .tpl in root and /includes/ back to the /src/ folder, as they will now have the changes from WHMCS upstream.
+- to merge from WHMCS, build the template, so our /src/tpl/*.tpl files are in the root, THEN do a: ```git fetch whmcs```
+and/or 
+```git pull whmcs TAGNAME``` **while gulp is running**,
+to pull in and auto-merge changes to root files, THEN copy all .tpl in root and /includes/ back to the /src/ folder, as they will now have the changes from WHMCS upstream.
+
+- ignore *-beta-* tags from WHMCS main repo
 
 ---
 
