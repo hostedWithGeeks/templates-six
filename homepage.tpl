@@ -10,6 +10,10 @@
 
 {elseif $announcements}
 
+    <div class="test">
+      <h1>ohai! #test</h1>
+    </div>
+
     <h2>{$LANG.news}</h2>
 
     {foreach $announcements as $announcement}

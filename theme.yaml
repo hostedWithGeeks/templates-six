@@ -1,7 +1,7 @@
-# WHMCS Six Theme Configuration File
+# WHMCS hostedWithGeeks Theme Configuration File
 
-name: "WHMCS Six Theme"
-description: "The Default Theme for WHMCS Version 6.0"
-author: "WHMCS Limited"
+name: "WHMCS hostedWithGeeks Theme"
+description: "A retro-CRT theme for WHMCS based on the official Six template."
+author: "George Merlocco"
 properties:
   serverSidePagination: false # Defines client side will handle pagination
