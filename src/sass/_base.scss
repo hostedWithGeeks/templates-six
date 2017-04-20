@@ -100,17 +100,17 @@ i {
   text-shadow: 0 0 0;
 }
 
-a {
+a, #top-nav a.quick-nav {
   position: relative;
   color: $color-amber;
   text-decoration: none;
 }
 
-a:hover {
+a:hover, #top-nav a.quick-nav:hover {
   color: $color-amber-hover;
 }
 
-a:focus, a:active {
+a:focus, #top-nav a.quick-nav:focus, a:active, #top-nav a.quick-nav:active {
   color: $color-amber;
 }
 
@@ -194,7 +194,7 @@ input[type=text]:focus {
 }
 
 .wrapper {
-  padding: 20px;
+  padding: 10px;
 }
 
 .terminal-content {
@@ -248,29 +248,30 @@ ul.shortcuts {
   a:hover span.link-url {
     color: $color-amber;
   }
+}
 
-  .retro {
-    -webkit-filter: sepia(1) saturate(20) hue-rotate(349deg);
-    height: 80px;
-    width: 80px;
-    -webkit-transition: all 0.42s;
-    -moz-transition: all 0.42s;
-    transition: all 0.42s;
-    position: absolute;
-  }
+.retro, #home-link img {
+  -webkit-transition: all 0.42s;
+  -webkit-filter: sepia(1) saturate(20) hue-rotate(349deg);
+  -moz-transition: all 0.42s;
+  transition: all 0.42s;
+}
+.retro {
+  position: absolute;
+  height: 80px;
+  width: 80px;
+}
 
-  .retro.invert {
-    -webkit-filter: invert(1) sepia(1) saturate(20) hue-rotate(339deg);
-  }
+.retro.invert {
+  -webkit-filter: invert(1) sepia(1) saturate(20) hue-rotate(339deg);
+}
 
-  a:hover .retro {
-    -webkit-filter: none;
-  }
+a:hover .retro, #home-link:hover img {
+  -webkit-filter: none;
+}
 
-  a:hover .retro.invert {
-    -webkit-filter: invert(1);
-  }
-
+a:hover .retro.invert {
+  -webkit-filter: invert(1);
 }
 
 .random {
@@ -292,7 +293,7 @@ blockquote {
   }
 
   .wrapper {
-    padding: 32px 64px;
+    padding: 32px 45px;
   }
 
   pre.title {
@@ -371,6 +372,10 @@ blockquote {
 
 @media (min-width: $bp-desktop) {
 
+  .wrapper {
+    padding: 32px 55px;
+  }
+
   ul.shortcuts {
     li {
       margin: 2rem 3% 0 0;
@@ -384,7 +389,7 @@ blockquote {
 @media (min-width: $bp-desktop-l) {
 
   .wrapper {
-    padding: 32px 90px;
+    padding: 32px 64px;
   }
 
 }
@@ -392,7 +397,7 @@ blockquote {
 @media (min-width: $bp-desktop-uw) {
 
   .wrapper {
-    padding: 32px 110px;
+    padding: 32px 90px;
   }
 
   ul.shortcuts {

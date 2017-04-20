@@ -1,6 +1,21 @@
 // _header.scss
 // Contains declarations for the title, search, and weather widgets
 
+#home-link::before {
+  display: none;
+}
+
+#home-link img {
+  height: 192px;
+  width: auto;
+  float: left;
+  margin: 20px 10px 0 0;
+}
+
+#home-link pre {
+  display: inline-block;
+}
+
 @media (min-width: 1500px) {
   header {
     margin-top: 20px;

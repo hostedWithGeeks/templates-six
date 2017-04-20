@@ -23,15 +23,15 @@ body.green {
     border: 1px dashed $color-green-hover;
   }
 
-  a {
+  a, #top-nav a.quick-nav {
     color: $color-green;
   }
 
-  a:hover {
+  a:hover, #top-nav a.quick-nav:hover {
     color: $color-green-hover;
   }
 
-  a:focus, a:active {
+  a:focus, #top-nav a.quick-nav:focus, a:active, #top-nav a.quick-nav:active {
     color: $color-green;
   }
 
@@ -92,22 +92,22 @@ body.green {
       color: $color-green;
     }
 
-    .retro {
-      -webkit-filter: sepia(1) saturate(30) hue-rotate(70deg);
-    }
+  }
 
-    .retro.invert {
-      -webkit-filter: invert(1) sepia(1) saturate(30) hue-rotate(50deg);
-    }
-    
-    a:hover .retro {
-      -webkit-filter: none;
-    }
+  .retro, #home-link img {
+    -webkit-filter: sepia(1) saturate(30) hue-rotate(70deg);
+  }
 
-    a:hover .retro.invert {
-      -webkit-filter: invert(1);
-    }
+  .retro.invert {
+    -webkit-filter: invert(1) sepia(1) saturate(30) hue-rotate(50deg);
+  }
 
+  a:hover .retro, #home-link:hover img {
+    -webkit-filter: none;
+  }
+
+  a:hover .retro.invert {
+    -webkit-filter: invert(1);
   }
 
   blockquote {

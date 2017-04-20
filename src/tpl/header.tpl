@@ -12,6 +12,33 @@
 
 </head>
 <body>
+<input type="checkbox" id="switch" checked>
+<input type="checkbox" id="flicker" checked>
+<input type="checkbox" id="greenTheme">
+
+<div class="switch-wires"></div>
+<div class="switch-mount">
+    <div class="switch-dirt"></div>
+    <div class="power-label btn-scanlines" title="Toggle Scanlines/Flicker"></div>
+    <div class="theme-button amber" title="Toggle CRT phosphor color"></div>
+    <div id="switch-wrap" class="surround on">
+        <div class="switch" title="Toggle CRT power">
+            <div class="button"></div>
+            <div class="button-face">
+                <div class="shadow"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<img class="crt-frame crt-frame-amber" src="{$WEB_ROOT}/templates/{$template}/images/crt_amber_mask.png"/>
+<img class="crt-frame crt-frame-green" src="{$WEB_ROOT}/templates/{$template}/images/crt_green_mask.png"/>
+
+<div class="crt-effects scanlines"></div>
+
+
+<div class="wrapper container">
+    <div class="terminal-content">
 
 {$headeroutput}
 
@@ -20,19 +47,6 @@
 
         <!-- Top Bar -->
         <div id="top-nav">
-            <!-- Language -->
-            {if $languagechangeenabled && count($locales) > 1}
-                <div class="pull-right nav">
-                    <a href="#" class="quick-nav" data-toggle="popover" id="languageChooser"><i class="fa fa-language"></i> {$LANG.chooselanguage} <span class="caret"></span></a>
-                    <div id="languageChooserContent" class="hidden">
-                        <ul>
-                            {foreach from=$locales item=locale}
-                                <li><a href="{$currentpagelinkback}language={$locale.language}">{$locale.localisedName}</a></li>
-                            {/foreach}
-                        </ul>
-                    </div>
-                </div>
-            {/if}
             <!-- Login/Account Notifications -->
             {if $loggedin}
                 <div class="pull-right nav">
@@ -76,6 +90,19 @@
             <div class="pull-right nav">
                 <a href="{$WEB_ROOT}/cart.php?a=view" class="quick-nav"><i class="fa fa-shopping-cart"></i> <span class="hidden-xs">{$LANG.viewcart} (</span><span id="cartItemCount">{$cartitemcount}</span><span class="hidden-xs">)</span></a>
             </div>
+            <!-- Language -->
+          {if $languagechangeenabled && count($locales) > 1}
+              <div class="pull-right nav">
+                  <a href="#" class="quick-nav" data-toggle="popover" id="languageChooser"><i class="fa fa-language"></i> {$LANG.chooselanguage}</a>
+                  <div id="languageChooserContent" class="hidden">
+                      <ul>
+                        {foreach from=$locales item=locale}
+                            <li><a href="{$currentpagelinkback}language={$locale.language}">{$locale.localisedName}</a></li>
+                        {/foreach}
+                      </ul>
+                  </div>
+              </div>
+          {/if}
 
             {if $adminMasqueradingAsClient}
                 <!-- Return to admin link -->
@@ -93,7 +120,17 @@
 
         </div>
 
-        <a href="{$WEB_ROOT}/index.php"><img src="{$WEB_ROOT}/templates/{$template}/img/logo.png" alt="{$companyname}" /></a>
+        <a id="home-link" href="{$WEB_ROOT}/index.php"><img src="{$WEB_ROOT}/templates/{$template}/images/hwg_geek_mirror.png" alt="{$companyname}" /><pre> __                __            __
+|  |--.-----.-----|  |_.-----.--|  |
+|     |  _  |__ --|   _|  -__|  _  |
+|__|__|_____|_____|____|_____|_____|
+.--.--.--|__|  |_|  |--.     hosted
+|  |  |  |  |   _|     |       with
+|________|__|____|__|__|      geeks
+.-----.-----.-----|  |--.-----.
+|  _  |  -__|  -__|    &lt;|__ --|
+|___  |_____|_____|__|__|_____|
+|_____|</pre></a>
 
     </div>
 </section>

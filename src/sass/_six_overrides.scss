@@ -1,0 +1,36 @@
+section#header {
+  background: 0;
+  border: 0;
+  padding: 0;
+}
+
+.container {
+  padding-right: 0;
+  padding-left: 0;
+}
+@media (min-width: 768px) {
+  .container {
+    width: auto;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: auto;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: auto;
+  }
+}
+
+#top-nav .nav {
+  font-size: inherit;
+  float: none !important;
+  margin: 8px 0;
+  text-align: right;
+
+  a {
+    text-decoration: none;
+  }
+}
