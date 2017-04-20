@@ -6,7 +6,9 @@ dist/
 release/
 
 # Duplicate output from CRT theme /src
+/favicon.png
 /*.tpl
+/includes
 /images
 /css
 /js/vendor
