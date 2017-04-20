@@ -3,6 +3,12 @@
 
 ---
 
+Notes for edits:
+
+- to merge from WHMCS, build the template, so our /src/tpl/*.tpl files are in the root, THEN do a git fetch/pull to pull in and auto-merge changes to root files, THEN copy all .tpl in root and /includes/ back to the /src/ folder, as they will now have the changes from WHMCS upstream.
+
+---
+
 This repository contains an HTML5-based layout for creating (or using) a personalized startpage with a retro CRT feel.
 
 Interactive example @ http://scar45.github.io/retro-crt-startpage/index.html
