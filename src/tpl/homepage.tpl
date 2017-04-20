@@ -11,7 +11,7 @@
 {elseif $announcements}
 
     <div class="test">
-      <h1>ohai! #test</h1>
+      <h1>ohai! #test (got it.)</h1>
     </div>
 
     <h2>{$LANG.news}</h2>
