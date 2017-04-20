@@ -10,7 +10,7 @@ and/or
 ```git pull whmcs TAGNAME``` **while gulp is running**,
 to pull in and auto-merge changes to root files, THEN copy all .tpl in root and /includes/ back to the /src/ folder, as they will now have the changes from WHMCS upstream.
 
-- ignore *-beta-* tags from WHMCS main repo
+- ignore ```beta``` tags from WHMCS main repo, be careful about ```master```, probably only want to use ```release``` tags.
 
 ---
 
