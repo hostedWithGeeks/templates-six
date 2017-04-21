@@ -37,7 +37,7 @@
 <div class="crt-effects scanlines"></div>
 
 
-<div class="wrapper container">
+<div class="wrapper crtcontainer">
     <div class="terminal-content">
 
 {$headeroutput}
@@ -131,7 +131,6 @@
 |  _  |  -__|  -__|    &lt;|__ --|
 |___  |_____|_____|__|__|_____|
 |_____|</pre></a>
-
     </div>
 </section>
 

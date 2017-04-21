@@ -3,7 +3,6 @@
 //
 // 'whmcs-hostedwithgeeks.scss' is the 'root' SASS file which pulls in all other imports
 
-@import "six_overrides";
 @import "vars";
 @import "fonts";
 @import "animations";
@@ -17,3 +16,4 @@
 @import "crt";
 @import "scanlines";
 @import "green_mod";
+@import "six_overrides";

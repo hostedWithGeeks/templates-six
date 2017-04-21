@@ -11,6 +11,7 @@
 
 *, html, body {
   box-sizing: border-box;
+  font-weight: 400 !important;
 }
 
 html, body {
@@ -40,14 +41,13 @@ h1 {
 }
 
 h2 {
-  font-family: deadcrt, mono, monospace;
-  font-size: 1.7rem;
+  font-size: 1.2rem;
   letter-spacing: 0;
 }
 
 h3, h4, h5, h6 {
   font-family: VT220, mono, monospace;
-  font-size: 2.2rem;
+  font-size: 2.1rem;
   font-weight: normal;
   text-transform: uppercase;
 }
@@ -108,6 +108,7 @@ a, #top-nav a.quick-nav {
 
 a:hover, #top-nav a.quick-nav:hover {
   color: $color-amber-hover;
+  text-decoration: none;
 }
 
 a:focus, #top-nav a.quick-nav:focus, a:active, #top-nav a.quick-nav:active {
@@ -147,14 +148,29 @@ input:not(input.btn):focus, select:focus, textarea:focus {
   color: $color-amber-hover !important;
 }
 
-input[type=text] {
+input[type=text], .form-control {
   background: rgba(0, 0, 0, 0.4);
   border: 1px dashed $color-amber-hover;
   border-width: 1px 0;
   width: 100%;
-  padding: 10px;
+  padding: 0 10px;
   margin: 1rem 0 0;
   color: $color-amber-hover;
+}
+
+.form-control {
+  margin: 0;
+}
+
+.form-control:focus {
+  border-bottom-style: solid;
+  border-color: $color-amber-hover;
+}
+
+body.green .form-control {
+  border-color: $color-green-hover;
+  border-width: 1px 0;
+  color: $color-green-hover;
 }
 
 input[type=text]:focus {
@@ -329,13 +345,20 @@ blockquote {
     height: 1px;
     left: 0px;
     bottom: -1px;
-    background: $color-amber-hover;
+    background: $color-amber;
     opacity: 0.4;
     transform: scaleX(0.85) translateY(0.15rem);
     transition: all 0.2s ease 0s;
   }
+  .navbar-main .navbar-nav > li > a::before {
+    height: 4px;
+  }
 
-  a:focus::before, a:hover::before, a.bookmark:hover span.link-name::before {
+  a:not(.bookmark)::after{
+    content: "";
+  }
+
+    a:focus::before, a:hover::before, a.bookmark:hover span.link-name::before {
     opacity: 0.75;
     transform: scaleX(1);
   }
