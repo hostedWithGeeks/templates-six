@@ -148,7 +148,7 @@ input:not(input.btn):focus, select:focus, textarea:focus {
   color: $color-amber-hover !important;
 }
 
-input[type=text], .form-control {
+input[type=text], .form-control, .dataTables_wrapper .dataTables_filter label .form-control {
   background: rgba(0, 0, 0, 0.4);
   border: 1px dashed $color-amber-hover;
   border-width: 1px 0;
@@ -156,6 +156,7 @@ input[type=text], .form-control {
   padding: 0 10px;
   margin: 1rem 0 0;
   color: $color-amber-hover;
+  font-size: 20px;
 }
 
 .form-control {
@@ -167,7 +168,7 @@ input[type=text], .form-control {
   border-color: $color-amber-hover;
 }
 
-body.green .form-control {
+body.green .form-control, body.green .dataTables_wrapper .dataTables_filter label .form-control {
   border-color: $color-green-hover;
   border-width: 1px 0;
   color: $color-green-hover;
