@@ -67,6 +67,11 @@ body.green {
   }
 
   @media (min-width: $bp-tablet) {
+
+    body.green {
+      background-size: cover;
+    }
+
     #switch:checked~.crt-frame-amber, #switch:checked~.crt-frame-green {
       display: none;
       animation:green_fade_from_black 2s linear;

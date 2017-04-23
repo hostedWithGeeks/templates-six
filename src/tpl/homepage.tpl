@@ -1,20 +1,6 @@
-{if $twitterusername}
+{if $announcements}
 
-    <h2>{$LANG.twitterlatesttweets}</h2>
-
-    <div id="twitterFeedOutput">
-        <p class="text-center"><img src="{$BASE_PATH_IMG}/loading.gif" /></p>
-    </div>
-
-    <script type="text/javascript" src="templates/{$template}/js/twitter.js"></script>
-
-{elseif $announcements}
-
-    <div class="test">
-      <h1>ohai! #test (got it.)</h1>
-    </div>
-
-    <h2>{$LANG.news}</h2>
+    <h2 class="section-title">{$LANG.news}</h2>
 
     {foreach $announcements as $announcement}
         {if $announcement@index < 2}
@@ -22,7 +8,7 @@
                 <h3>
                     <span class="label label-default">
                         {$announcement.rawDate|date_format:"M jS"}
-                    </span>
+                    </span>//
                     <a href="{if $seofriendlyurls}{$WEB_ROOT}/announcements/{$announcement.id}/{$announcement.urlfriendlytitle}.html{else}announcements.php?id={$announcement.id}{/if}">{$announcement.title}</a>
                 </h3>
 
@@ -55,4 +41,14 @@
             </div>
         {/if}
     {/foreach}
+{/if}
+{if $twitterusername}
+
+    <h2 class="section-title">{$LANG.twitterlatesttweets}</h2>
+
+    <div id="twitterFeedOutput">
+        <p class="text-center"><img src="{$BASE_PATH_IMG}/loading.gif" /></p>
+    </div>
+
+    <script type="text/javascript" src="templates/{$template}/js/twitter.js"></script>
 {/if}

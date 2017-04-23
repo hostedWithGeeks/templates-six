@@ -87,6 +87,7 @@ body.green .dropdown-menu > li > a:focus, body.green .navbar-main .dropdown-menu
 div.header-lined h1 {
   color: inherit;
   font-size: 1.7rem;
+  padding-bottom: 0;
   border-color: inherit;
   border-style: dashed;
   border-width: 0 0 2px;
@@ -170,6 +171,10 @@ body.green .btn-primary:active:focus {
   color: $color-black;
 }
 
+.progress {
+  background-color: rgba(0,0,0,0.4);
+}
+
 .badge {
   background-color: $color-amber;
   color: $color-black;
@@ -242,9 +247,22 @@ body.green .panel-default > .panel-heading, body.green .panel-danger > .panel-he
   background: $color-green;
 }
 
+.label-warning {
+  background: $color-amber;
+}
+
+body.green .label-warning{
+  background: $color-green;
+}
+
+body.green .label-warning:hover {
+  background: $color-green-hover;
+}
+
 .panel-title {
   font-size: 20px;
   text-align: right;
+  font-family: VT220, mono, monospace;
 }
 
 .panel-footer {
@@ -258,16 +276,20 @@ body.green .panel-default > .panel-heading, body.green .panel-danger > .panel-he
 
 .list-group-item {
   background: transparent;
+  border-color: inherit;
+}
+
+a.list-group-item {
   border: 0;
   margin: 5px 0 0;
 }
 
-.list-group-item:hover {
+a.list-group-item:hover {
   background-color: $color-amber-hover;
   color: $color-black;
 }
 
-body.green .list-group-item:hover {
+body.green a.list-group-item:hover {
   background-color: $color-green-hover;
   color: $color-black;
 }
@@ -363,6 +385,126 @@ body.green .pagination > .active > a {
   background-color: $color-green;
   border-color: $color-green;
   color: $color-black;
+}
+
+.md-editor {
+  border-color: inherit;
+  border-style: dashed;
+  border-width: 1px 0;
+}
+
+.md-editor .md-footer, .md-editor > .md-header {
+  background: none;
+  color: inherit;
+}
+
+.md-editor > .md-preview {
+  background: inherit;
+  border-color: inherit;
+}
+
+.md-editor.md-fullscreen-mode textarea, .md-editor.md-fullscreen-mode .md-preview , .md-editor.md-fullscreen-mode .md-preview p {
+  font-family: Menlo,Monaco,Consolas,"Courier New",monospace !important;
+}
+
+.login-popover {
+  margin-left: -77px
+}
+
+section#home-banner, section#home-banner h2, body.green section#home-banner h2 {
+  color: inherit;
+}
+
+.input-group-lg > .form-control, .input-group-lg > .input-group-addon, .input-group-lg > .input-group-btn > .btn {
+  font-size: 20px;
+  border-radius: 0;
+  color: $color-black;
+}
+
+.input-group-lg > .input-group-btn > .btn {
+  border-radius: 0 3px 3px 0;
+}
+
+.home-shortcuts {
+  color: inherit;
+}
+
+.home-shortcuts h3 {
+  margin: 0 0 30px;
+}
+
+.home-shortcuts li {
+  border-color: inherit;
+  border-style: dashed;
+  border-width: 0 0 2px 0;
+  padding: 10px 0;
+}
+
+.home-shortcuts li a {
+  color: inherit;
+}
+
+.home-shortcuts li a:hover {
+  color: $color-amber-hover;
+}
+
+body.green .home-shortcuts li a:hover {
+  color: $color-green-hover;
+}
+
+.home-shortcuts li a i {
+  font-size: 48px;
+}
+
+@media (min-width: $bp-tablet) {
+  .home-shortcuts li {
+    border-width: 0 3px 0 0;
+  }
+
+  .home-shortcuts li:first-child {
+    border-left: 0;
+  }
+
+  .home-shortcuts li:last-child {
+    border-right: 0;
+  }
+
+  .home-shortcuts li a i {
+    font-size: 64px;
+  }
+}
+
+h2.section-title {
+  margin-top: 40px;
+  border-width: 0 0 2px;
+  border-style: dashed;
+}
+
+div.announcement-single .label {
+  font-family: arcade, mono, monospace;
+  font-size: 1.1rem;
+  padding: 0;
+}
+
+div.announcement-single blockquote .label {
+  color: $color-black;
+  font-family: VT220, mono, monospace;
+  font-size: 20px;
+  padding: 4px 10px 2px;
+  border-radius: 3px;
+}
+
+div.announcement-single blockquote {
+  margin-top: 0;
+}
+
+div.tweet span {
+  font-size: inherit;
+  color: inherit;
+
+  &::before {
+    content: "@ ";
+  }
 }
 
 #top-nav .nav {

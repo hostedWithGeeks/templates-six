@@ -113,7 +113,7 @@ function readPrefs() {
         cookieGreenTheme=readCookie('greenTheme');
 
     if (cookiePower == 0) { powerOff() } else { powerOn() }
-    if (cookieFlicker == 0) { scanlinesOff() } else { scanlinesOn() }
+    if (cookieFlicker == 0) { scanlinesOff() } else {} //scanlinesOn() }
     if (cookieGreenTheme == 0) { amberTheme() } else { greenTheme() }
 
     console.log("cookiePower=="+cookiePower+" /// cookieFlicker=="+cookieFlicker+" /// cookieGreenTheme=="+cookieGreenTheme);
@@ -125,6 +125,6 @@ $(document).ready(function () {
     setInterval(randomgen, 300000); // Regenerate the fake encrypted string in footer every 5 minutes because why not?
 
     $(".surround").on('click', togglePower);
-    $(".power-label").on('click',toggleScanlines);
+//    $(".power-label").on('click',toggleScanlines);
     $(".theme-button").on('click', toggleTheme);
 });

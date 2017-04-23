@@ -29,7 +29,7 @@ body {
   margin: 0;
 }
 
-h1, h2 {
+h1, h2, h3 {
   font-family: arcade, mono, monospace;
   font-weight: normal;
   text-transform: uppercase;
@@ -38,16 +38,23 @@ h1, h2 {
 h1 {
   font-size: 2.9rem;
   letter-spacing: 2px;
+  line-height: 1.7;
 }
 
 h2 {
-  font-size: 1.2rem;
+  font-size: 1.7rem;
+  letter-spacing: 0;
+  line-height: 1.5;
+}
+
+h3 {
+  font-size: 1.1rem;
   letter-spacing: 0;
 }
 
-h3, h4, h5, h6 {
+h4, h5, h6 {
   font-family: VT220, mono, monospace;
-  font-size: 2.1rem;
+  font-size: 20px;
   font-weight: normal;
   text-transform: uppercase;
 }
@@ -148,7 +155,7 @@ input:not(input.btn):focus, select:focus, textarea:focus {
   color: $color-amber-hover !important;
 }
 
-input[type=text], .form-control, .dataTables_wrapper .dataTables_filter label .form-control {
+input[type=text], .md-editor > textarea, .form-control, .dataTables_wrapper .dataTables_filter label .form-control {
   background: rgba(0, 0, 0, 0.4);
   border: 1px dashed $color-amber-hover;
   border-width: 1px 0;
@@ -159,25 +166,25 @@ input[type=text], .form-control, .dataTables_wrapper .dataTables_filter label .f
   font-size: 20px;
 }
 
+.md-editor > textarea {
+  font-family: VT220, mono, Monospace;
+}
+
 .form-control {
   margin: 0;
 }
 
-.form-control:focus {
+input[type=text]:focus, .form-control:focus, .md-editor > textarea:focus {
+  background: rgba(0, 0, 0, 0.88);
   border-bottom-style: solid;
   border-color: $color-amber-hover;
+  color: inherit;
 }
 
-body.green .form-control, body.green .dataTables_wrapper .dataTables_filter label .form-control {
+body.green .form-control, body.green .md-editor > textarea, body.green .dataTables_wrapper .dataTables_filter label .form-control {
   border-color: $color-green-hover;
   border-width: 1px 0;
   color: $color-green-hover;
-}
-
-input[type=text]:focus {
-  background: rgba(0, 0, 0, 0.88);
-  border-bottom-style: solid;
-  color: $color-amber;
 }
 
 ::-moz-placeholder, ::-webkit-input-placeholder {
@@ -310,7 +317,7 @@ blockquote {
   }
 
   .wrapper {
-    padding: 32px 45px;
+    padding: 48px 45px;
   }
 
   pre.title {
@@ -397,7 +404,7 @@ blockquote {
 @media (min-width: $bp-desktop) {
 
   .wrapper {
-    padding: 32px 55px;
+    padding: 48px 55px;
   }
 
   ul.shortcuts {
@@ -413,7 +420,7 @@ blockquote {
 @media (min-width: $bp-desktop-l) {
 
   .wrapper {
-    padding: 32px 64px;
+    padding: 48px 64px;
   }
 
 }
@@ -421,7 +428,7 @@ blockquote {
 @media (min-width: $bp-desktop-uw) {
 
   .wrapper {
-    padding: 32px 90px;
+    padding: 48px 90px;
   }
 
   ul.shortcuts {

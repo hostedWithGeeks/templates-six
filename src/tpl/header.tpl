@@ -13,7 +13,7 @@
 </head>
 <body>
 <input type="checkbox" id="switch" checked>
-<input type="checkbox" id="flicker" checked>
+<input type="checkbox" id="flicker">
 <input type="checkbox" id="greenTheme">
 
 <div class="switch-wires"></div>
@@ -34,10 +34,10 @@
 <img class="crt-frame crt-frame-amber" src="{$WEB_ROOT}/templates/{$template}/images/crt_amber_mask.png"/>
 <img class="crt-frame crt-frame-green" src="{$WEB_ROOT}/templates/{$template}/images/crt_green_mask.png"/>
 
-<div class="crt-effects scanlines"></div>
+<div class="crt-effects"></div>
 
 
-<div class="wrapper crtcontainer">
+<div class="wrapper crt-container">
     <div class="terminal-content">
 
 {$headeroutput}
@@ -90,19 +90,6 @@
             <div class="pull-right nav">
                 <a href="{$WEB_ROOT}/cart.php?a=view" class="quick-nav"><i class="fa fa-shopping-cart"></i> <span class="hidden-xs">{$LANG.viewcart} (</span><span id="cartItemCount">{$cartitemcount}</span><span class="hidden-xs">)</span></a>
             </div>
-            <!-- Language -->
-          {if $languagechangeenabled && count($locales) > 1}
-              <div class="pull-right nav">
-                  <a href="#" class="quick-nav" data-toggle="popover" id="languageChooser"><i class="fa fa-language"></i> {$LANG.chooselanguage}</a>
-                  <div id="languageChooserContent" class="hidden">
-                      <ul>
-                        {foreach from=$locales item=locale}
-                            <li><a href="{$currentpagelinkback}language={$locale.language}">{$locale.localisedName}</a></li>
-                        {/foreach}
-                      </ul>
-                  </div>
-              </div>
-          {/if}
 
             {if $adminMasqueradingAsClient}
                 <!-- Return to admin link -->
@@ -131,6 +118,7 @@
 |  _  |  -__|  -__|    &lt;|__ --|
 |___  |_____|_____|__|__|_____|
 |_____|</pre></a>
+
     </div>
 </section>
 
@@ -201,12 +189,12 @@
     <div class="home-shortcuts">
         <div class="container">
             <div class="row">
-                <div class="col-md-4 hidden-sm hidden-xs text-center">
-                    <p class="lead">
+                <div class="col-md-12 hidden-sm hidden-xs text-center">
+                    <h3>
                         {$LANG.howcanwehelp}
-                    </p>
+                    </h3>
                 </div>
-                <div class="col-sm-12 col-md-8">
+                <div class="col-sm-12">
                     <ul>
                         {if $registerdomainenabled || $transferdomainenabled}
                             <li>

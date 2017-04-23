@@ -17,17 +17,17 @@ $ease-in-quint:cubic-bezier(0.755, 0.050, 0.855, 0.060);
   }
 }
 
-#switch~.container>.terminal-content{
+#switch~.crt-container>.terminal-content{
   animation: turn-off 1.25s $ease-out-quint;
   animation-fill-mode:forwards;
 }
 
-#switch:checked~.container>.terminal-content{
-  animation: turn-on 3s linear;
+#switch:checked~.crt-container>.terminal-content{
+  animation: turn-on 1s linear;
   animation-fill-mode:forwards;
 }
 
-#switch:checked~.container .overlay{
+#switch:checked~.crt-container .overlay{
   animation:overlay-anim 5s linear;
   animation-fill-mode:forwards;
 }
