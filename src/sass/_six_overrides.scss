@@ -14,6 +14,11 @@
   }
 }
 
+.alert-danger.admin-masquerade-notice {
+  background: rgba(255,0,0,0.6);
+  color: #fcc;
+}
+
 section#header, section#main-menu, .navbar-main, section#footer p, .dataTables_wrapper {
   background: none;
   border: 0;
@@ -44,7 +49,7 @@ section#home-banner, .home-shortcuts, .label-default {
   margin-top: 20px;
 }
 
-.navbar-main .navbar-nav > li > a, .breadcrumb > .active, .breadcrumb > li + li::before, .text-warning, i.icon-rss {
+.navbar-main .navbar-nav > li > a, .breadcrumb > .active, .breadcrumb > li + li::before, .text-warning, i.icon-rss, .text-muted {
   color: inherit;
 }
 .navbar-main .navbar-nav > .open > a, .navbar-main .navbar-nav > .open > a:focus, .navbar-main .navbar-nav > li > a:hover {
@@ -180,6 +185,7 @@ body.green .btn-primary:active:focus {
   color: $color-black;
   font-size: 20px;
   border-radius: 3px;
+  padding: 3px 7px 1px;
 }
 
 .list-group-item.active > .badge, .nav-pills > .active > a > .badge {
@@ -223,7 +229,7 @@ body.green .badge {
   color: inherit;
 }
 
-.alert-info, .alert-warning, .alert-danger {
+.alert-success, .alert-info, .alert-warning, .alert-danger {
   background-color: inherit;
   border: 0;
   color: inherit;
@@ -231,19 +237,21 @@ body.green .badge {
 
 .panel {
   background: none;
+  border-color: inherit;
 }
 
 .panel-default, .panel-danger {
   border-color: inherit;
 }
 
-.panel-default > .panel-heading, .panel-danger > .panel-heading {
+.panel-default > .panel-heading, .panel-danger > .panel-heading, .panel-info > .panel-heading {
   background: $color-amber;
   border-color: inherit;
   color: $color-black;
+  font-size: 20px;
 }
 
-body.green .panel-default > .panel-heading, body.green .panel-danger > .panel-heading {
+body.green .panel-default > .panel-heading, body.green .panel-danger > .panel-heading, body.green .panel-info > .panel-heading {
   background: $color-green;
 }
 
@@ -277,6 +285,15 @@ body.green .label-warning:hover {
 .list-group-item {
   background: transparent;
   border-color: inherit;
+  border-style: dashed;
+}
+
+.list-group-item-danger {
+  color: #f00;
+}
+
+.list-group-item-info, .list-group-item-warning, .list-group-item-success {
+  color: inherit;
 }
 
 a.list-group-item {
@@ -516,4 +533,23 @@ div.tweet span {
   a {
     text-decoration: none;
   }
+}
+
+.main-content .panel-title {
+  text-align: left;
+}
+
+.main-content blockquote {
+  font-size: 20px;
+  border-left: 0 !important;
+  padding: 10px 5px;
+}
+
+.kbcategories a {
+  font-size: 20px;
+}
+
+.kbcategories a .glyphicon, .kbarticles a .glyphicon {
+  color: inherit;
+  margin-right: 5px;
 }
