@@ -34,7 +34,7 @@ section#home-banner, .home-shortcuts, .label-default {
   background: none;
 }
 
-.lead, .label-default, section#footer p {
+.lead, .label, .label-default, section#footer p {
   font-size: 20px;
   font-weight: normal;
   color: inherit;
@@ -122,6 +122,10 @@ input[type="text"] {
   margin: 0;
 }
 
+.form-control[disabled], .form-control[readonly], fieldset[disabled] .form-control {
+  background: none;
+}
+
 .btn, .clientalert .btn-xs {
   font-family: inherit;
   padding: 2px 10px;
@@ -129,6 +133,11 @@ input[type="text"] {
   line-height: 1.45;
   background: $color-amber;
   border-color: inherit;
+  color: $color-black !important;
+
+  &:active {
+    color: $color-black !important;
+  }
 }
 
 body.green .btn {
@@ -199,11 +208,12 @@ body.green .list-group-item.active > .badge, body.green .nav-pills > .active > a
 
 .popover, .popover-title {
   font-size: 20px;
-  background-color: inherit;
+  background-color: $color-black;
   border-bottom: inherit;
   border-radius: 0;
   font-family: inherit;
   line-height: 1;
+  margin-right: 30px;
 }
 
 .popover.bottom > .arrow::after {
@@ -212,6 +222,12 @@ body.green .list-group-item.active > .badge, body.green .nav-pills > .active > a
 
 body.green .popover.bottom > .arrow::after {
   border-bottom-color: $color-green;
+}
+
+.clientalert {
+  padding: 15px;
+  border-bottom-style: dashed;
+  border-bottom-color: inherit;
 }
 
 .clientalert:hover {
@@ -278,7 +294,7 @@ body.green .label-warning:hover {
   border-color: inherit;
 }
 
-.list-group {
+.list-group, .panel {
   font-size: 20px;
 }
 
@@ -311,6 +327,14 @@ body.green a.list-group-item:hover {
   color: $color-black;
 }
 
+.panel > .list-group .ticket-details-children:nth-child(2n) {
+  background: none;
+}
+
+.panel-actions > .list-group .list-group-item {
+  border-color: inherit !important;
+}
+
 a.list-group-item, button.list-group-item {
   color: $color-amber;
 }
@@ -339,16 +363,24 @@ body.green a.list-group-item.active {
   color: inherit;
 }
 
-.dataTables_wrapper .dataTables_info {
-  background: none;
+.dataTables_wrapper {
+  font-size: 20px;
+
+  .dataTables_info {
+    background: none;
+    font-size: 20px;
+    color: inherit;
+    border-bottom-color: inherit;
+  }
+
+  table.table-list thead th {
+    background: inherit;
+    border-color: inherit;
+    font-size: 20px;
+    color: inherit;
+  }
 }
 
-.dataTables_wrapper .dataTables_info, table.table-list thead th {
-  background: inherit;
-  border-color: inherit;
-  font-size: 20px;
-  color: inherit;
-}
 
 body.green table.table-list thead th {
   border-color: $color-green-hover;
@@ -410,9 +442,13 @@ body.green .pagination > .active > a {
   border-width: 1px 0;
 }
 
-.md-editor .md-footer, .md-editor > .md-header {
+.md-editor .md-footer, .md-editor > .md-header, .md-editor .md-controls .md-control {
   background: none;
   color: inherit;
+
+  &:hover {
+    color: inherit;
+  }
 }
 
 .md-editor > .md-preview {
@@ -552,4 +588,76 @@ div.tweet span {
 .kbcategories a .glyphicon, .kbarticles a .glyphicon {
   color: inherit;
   margin-right: 5px;
+}
+
+.ticket-reply {
+  background: none;
+  border-color: inherit;
+  margin: 30px 0;
+
+  &.staff {
+    background: none;
+    border-color: inherit;
+
+    .user {
+      background: none;
+    }
+  }
+
+  .user {
+    background: none;
+
+    .name, .type {
+      font-size: 20px;
+    }
+  }
+
+  .attachments {
+    background: inherit;
+    font-size: 20px;
+    border-top-color: inherit;
+  }
+
+  .date, .rating-done .rated {
+    font-size: 20px;
+    font-family: inherit;
+  }
+
+  span.star, span.star.active, .rating span.star, .rating span.star.active, .rating-done span.star, .rating-done span.star.active {
+    &:hover {
+      color: inherit;
+
+      &::before {
+        color: inherit;
+      }
+    }
+    &::before {
+      color: inherit;
+    }
+  }
+}
+
+.bg-info {
+  background: $color-amber;
+  color: $color-black;
+}
+
+body.green .bg-info {
+  background: $color-green;
+}
+
+.table > thead > tr > th {
+  border-bottom-color: inherit;
+}
+
+tr.masspay-invoice-detail td {
+  font-size: 20px;
+}
+
+tr.masspay-total td {
+  background-color: inherit;
+}
+
+fieldset {
+  border: 0;
 }
